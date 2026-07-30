@@ -1,0 +1,15 @@
+services:
+  gost:
+    container_name: gost
+    image: ginuerzh/gost:latest
+    network_mode: host
+    restart: unless-stopped
+    command:
+      # For Rocket League (point to local Tailscale IP)
+      - "-L=udp://:7777/100.105.54.64:7777"
+
+      # For Insurgency Sandstorm (point to VM Tailscale IP)
+      - "-L=tcp://:27102/100.114.227.103:27102"
+      - "-L=udp://:27102/100.114.227.103:27102"
+      - "-L=tcp://:27131/100.114.227.103:27131"
+      - "-L=udp://:27131/100.114.227.103:27131"
