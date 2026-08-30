@@ -8,8 +8,12 @@ services:
       # For Rocket League (point to local Tailscale IP)
       - "-L=udp://:7777/100.105.54.64:7777"
 
-      # For Insurgency Sandstorm (point to VM Tailscale IP)
-      - "-L=tcp://:27102/100.114.227.103:27102"
-      - "-L=udp://:27102/100.114.227.103:27102"
-      - "-L=tcp://:27131/100.114.227.103:27131"
-      - "-L=udp://:27131/100.114.227.103:27131"
+      # For Insurgency Sandstorm (point to Ally Tailscale IP)
+      - "-L=tcp://:27102/100.123.114.55:27102"
+      - "-L=udp://:27102/100.123.114.55:27102"
+      - "-L=tcp://:27131/100.123.114.55:27131"
+      - "-L=udp://:27131/100.123.114.55:27131"
+
+      # For PZ (point to Ally Tailscale IP)
+      - "-L=udp://:16261/100.123.114.55:16261"
+      - "-L=udp://:16262/100.123.114.55:16262"
